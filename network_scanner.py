@@ -1,8 +1,9 @@
+import optparse
 import scapy.all as scapy
 from optparse import OptParseError, OptionParser 
 
 def get_arguments():
-    parser = OptParseError.OptionParser()
+    parser = optparse.OptionParser()
     parser.add_option("-t", "--target", dest="target", help="Target IP / IP range.")
     options, arguments = parser.parse_args()
     return options
